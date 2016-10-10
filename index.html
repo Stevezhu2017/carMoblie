@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<title>魅力谷女性MINI车网</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="css/rester.css">
+	<link rel="stylesheet" href="css/diffent.css">
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/jquery.min.1.7.js"></script>
+	<script src="js/my.js"></script>
+	<script src="js/touchslider.dev.js"></script>
+</head>
+<body>
+	<!--头部-->
+	<header>
+		<div class="top">
+			<div class="logo fl"><a href="index.html"><img src="img/logo.png"></a></div>
+			<div class="menu fr">
+				<img src="icon/menu_icon.png" class="menu_icon"/>
+				<p>菜单</p>
+				<div class="nav none">
+					<div class="clearfix">
+						<ul class="fl">
+							<li class="mainNav red">车型导购</li>
+							<li><a href="process.html">购车流程</a></li>
+							<li><a href="calculation.html">车贷计算</a></li>
+							<li><a href="insurance.html">保险计算</a></li>
+						</ul>
+						<ul class="fr">
+							<li class="mainNav red">售后服务</li>
+							<li><a href="maintenance.html">维修查询</a></li>
+							<li><a href="maintain.html">保养查询</a></li>
+						</ul>
+					</div>
+					<div class="clearfix">
+						<ul class="fl">
+							<li class="mainNav red">联系我们</li>
+							<li><a href="cotanct.html">联系我们</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--主体内容-->
+	<section class="main auto">
+	<!--广告图-->
+	<div class="swipe">
+		<ul id="slider">
+			<li style="display:block"><img src="img/banner01.jpg" alt="banner01" /></li>
+			<li><img src="img/banner02.jpg" alt="banner02" /></li>
+		</ul>
+		<div id="pagenavi">
+			<!--<a href="javascript:void(0);" class="active">1</a>
+            <a href="javascript:void(0);">2</a>
+            <a href="javascript:void(0);">3</a>
+            <a href="javascript:void(0);">4</a>-->
+		</div>
+	</div>
+	<script type="text/javascript">
+		var active=0,
+				as=document.getElementById('pagenavi').getElementsByTagName('a');
+		for(var i=0;i<$('#slider li').length;i++){
+			$('#pagenavi').append('<a href="javascript:void(0);">'+i+'</a>')
+		}
+		$('#pagenavi a').eq(0).addClass('active');
+		for(var i=0;i<as.length;i++){
+			(function(){
+				var j=i;
+				as[i].onclick=function(){
+					t2.slide(j);
+					return false;
+				}
+			})();
+		}
+		var t2=new TouchSlider({id:'slider', speed:600, timeout:6000,before:function(index){
+			as[active].className='';
+			active=index;
+			as[active].className='active';
+		}});
+	</script>
+		<!--城市选择-->
+		<div class="city auto">
+			<select>
+				<option>请选择您的城市</option>
+				<option>北京</option>
+				<option>上海</option>
+				<option>广州</option>
+				<option>深圳</option>
+			</select>
+		</div>
+	<!--推荐车-->
+		<div class="cailiao clearfix">
+			<p class="red carTitle">推荐车</p>
+			<ul class="indexCar clearfix auto">
+				<li class="clearfix">
+					<p class="fl"><a href="productlist1.html"><img src="img/car.png" alt="car"/></a></p>
+					<a href="productlist1.html">
+						<div class="fl carTitleSmall">
+							<p>经典MINI三门版</p>
+							<p>查看更多车型>></p>
+						</div>
+					</a>
+				</li>
+				<li class="clearfix">
+					<p class="fl"><a href="productlist2.html"><img src="img/car2.png" alt="car2"/></a></p>
+					<a href="productlist2.html">
+						<div class="fl carTitleSmall">
+							<p>经典MINI五门版</p>
+							<p>查看更多车型>></p>
+						</div>
+					</a>
+				</li>
+				<li class="clearfix">
+					<p class="fl"><a href="productlist3.html"><img src="img/car3.png" alt="car3"/></a></p>
+					<a href="productlist3.html">
+						<div class="fl carTitleSmall">
+							<p>MINI COUNTRYMAN</p>
+							<p>查看更多车型>></p>
+						</div>
+					</a>
+				</li>
+				<li class="clearfix">
+					<p class="fl"><a href="productlist4.html"><img src="img/car.png" alt="car"/></a></p>
+					<a href="productlist4.html">
+						<div class="fl carTitleSmall">
+							<p>MINI CLUBMAN</p>
+							<p>查看更多车型>></p>
+						</div>
+					</a>
+				</li>
+				<li class="clearfix">
+					<p class="fl"><a href="productlist5.html"><img src="img/car5.png" alt="car5"/></a></p>
+					<a href="productlist5.html">
+					<div class="fl carTitleSmall">
+						<p>MINI CABRIO</p>
+						<p>查看更多车型>></p>
+					</div>
+					</a>
+				</li>
+				<li class="clearfix">
+					<p class="fl"><a href="productlist6.html"><img src="img/car6.png" alt="car6"/></a></p>
+					<a href="productlist6.html">
+					<div class="fl carTitleSmall">
+						<p>MINI PACEMAN</p>
+						<p>查看更多车型>></p>
+					</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<p class="tongLan auto"><img src="img/banner03.jpg" alt="banner03"/></p>
+	<!--车型-->
+		<div class="cailiao">
+			<p class="carTitle red">车型</p>
+			<ul class="cailiaoBox auto clearfix">
+				<li class="cailiaoC">
+					<div class="cailiaoCB">
+						<a href="productlist1.html"><p align="center"><img src="img/car.png" alt="car"/></p></a>
+						<p class="cailiaoMiao">经典三门版</p>
+					</div>
+				</li>
+				<li class="cailiaoC">
+					<div class="cailiaoCB">
+						<a href="productlist2.html"><p align="center"><img src="img/car2.png" alt="car"/></p></a>
+						<p class="cailiaoMiao">经典MINI五门版</p>
+					</div>
+				</li>
+				<li class="cailiaoC">
+					<div class="cailiaoCB">
+						<a href="productlist3.html"><p align="center"><img src="img/car3.png" alt="car"/></p></a>
+						<p class="cailiaoMiao">MINI COUNTRYMAN</p>
+					</div>
+				</li>
+				<li class="cailiaoC">
+					<div class="cailiaoCB">
+						<a href="productlist4.html"><p align="center"><img src="img/car4.png" alt="car4"/></p></a>
+						<p class="cailiaoMiao">MINI CLUBMAN</p>
+					</div>
+				</li>
+				<li class="cailiaoC">
+					<div class="cailiaoCB">
+						<a href="productlist5.html"><p align="center"><img src="img/car5.png" alt="car5"/></p></a>
+						<p class="cailiaoMiao">MINI CABRIO</p>
+					</div>
+				</li>
+				<li class="cailiaoC">
+					<div class="cailiaoCB">
+						<a href="productlist6.html"><p align="center"><img src="img/car6.png" alt="car6"/></p></a>
+						<p class="cailiaoMiao">MINI PACEMAN</p>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+		<!--活动促销-->
+		<div class="party">
+			<ul class="clearfix">
+				<li class="fl red"><span>活动促销</span></li>
+				<li class="fr"><a href="partylist.html">查看更多>></a></li>
+			</ul>
+			<div class="partyImg clearfix">
+				<div><a href="partydetial.html"><img src="img/partyimg.jpg" alt="partyimg"/></a></div>
+				<div><a href="partydetial1.html"><img src="img/partyimg1.jpg" alt="partyimg"/></a></div>
+				<div><a href="partydetial2.html"><img src="img/partyimg3.jpg" alt="partyimg"/></a></div>
+				<div><a href="partydetial3.html"><img src="img/partyimg4.jpg" alt="partyimg"/></a></div>
+			</div>
+		</div>
+
+		<!--热门资讯-->
+		<div class="news">
+			<ul class="clearfix newsTitle">
+				<li class="fl red"><span>热门资讯</span></li>
+				<li class="fr"><a href="newslist.html">查看更多>></a></li>
+			</ul>
+			<ul class="newsList">
+				<li class="clearfix">
+					<p class="fl"><a href="newsdetial.html"><img src="img/newsImg.png" alt="newsImg"></a></p>
+					<p class="fl"><a href="newsdetial.html">第十届花都汽车论坛盛大召开 供给侧改革下</a></p>
+				</li>
+				<li class="clearfix">
+					<p class="fl"><a href="newsdetial.html"><img src="img/q1.jpg" alt="q1"></a></p>
+					<p class="fl"><a href="newsdetial1.html">日间行车灯的初衷与相关知识</a></p>
+				</li>
+				<li class="clearfix">
+					<p class="fl"><a href="newsdetial.html"><img src="img/q3.jpg" alt="q3"></a></p>
+					<p class="fl"><a href="newsdetial2.html">日本全国汽油平均零售价连续2周下降</a></p>
+				</li>
+				<li class="clearfix">
+					<p class="fl"><a href="newsdetial.html"><img src="img/q4.jpg" alt="q4"></a></p>
+					<p class="fl"><a href="newsdetial3.html">被日本禁止叫车服务后 Uber开始在东京送外卖了</a></p>
+				</li>
+			</ul>
+		</div>
+		<!--图标-->
+		<div class="icon">
+			<ul>
+				<li><a href="drive.html"><img src="icon/nav01.jpg"><p>预约试驾</p></a></li>
+				<li><a href="store.html"><img src="icon/nav02.jpg"><p>查询专营店</p></a></li>
+				<li><a href="booking.html"><img src="icon/nav03.jpg"><p>在线订车</p></a></li>
+				<li><a href="login.html"><img src="icon/nav04.jpg"><p>登录</p></a></li>
+			</ul>
+			<ul>
+				<li><a href="register.html"><img src="icon/nav05.jpg"><p>注册</p></a></li>
+			</ul>
+		</div>
+		<!--底部-->
+		<footer>
+			<p>
+				<a href="img/user_manual.zip">用户指南</a>
+				<span>|</span>
+				<span><a href="manual.html">车型手册</a></span>
+			</p>
+			<p>
+				18025602905
+				<span>|</span>
+				<span>392210276@qq.com</span>
+			</p>
+			<hr />
+			<p><a href="cotanct.html">联络魅力谷</a></p>
+			<hr />
+			<p>粤ICP备16059336号</p>
+			<p>深圳市蓝鳍金枪投资有限公司</p>
+		</footer>
+	</section>
+
+
+
+
+
+</body>
+</html>

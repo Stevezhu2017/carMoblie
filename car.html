@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<title>购物车</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="css/rester.css">
+	<link rel="stylesheet" href="css/diffent.css">
+	<link rel="stylesheet" href="css/public.css">
+	<script src="js/jquery.min.1.7.js"></script>
+	<script src="js/my.js"></script>
+	<script src="js/touchslider.dev.js"></script>
+</head>
+<body>
+	<!--头部-->
+	<header>
+		<div class="top">
+			<div class="logo fl"><a href="index.html"><img src="img/logo.png"></a></div>
+			<div class="menu fr">
+				<img src="icon/menu_icon.png" class="menu_icon"/>
+				<p>菜单</p>
+				<div class="nav none">
+					<div class="clearfix">
+						<ul class="fl">
+							<li class="mainNav red">车型导购</li>
+							<li><a href="process.html">购车流程</a></li>
+							<li><a href="calculation.html">车贷计算</a></li>
+							<li><a href="insurance.html">保险计算</a></li>
+						</ul>
+						<ul class="fr">
+							<li class="mainNav red">售后服务</li>
+							<li><a href="maintenance.html">维修查询</a></li>
+							<li><a href="maintain.html">保养查询</a></li>
+						</ul>
+					</div>
+					<div class="clearfix">
+						<ul class="fl">
+							<li class="mainNav red">联系我们</li>
+							<li><a href="cotanct.html">联系我们</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--主体内容-->
+	<section class="main auto">
+		<p class="carTitle">购物车(1)</p>
+		<ul class="carList">
+			<li class="clearfix">
+				<div class="carListLeft clearfix fl">
+					<div class="fl"><input type="checkbox" class="checkBox"></div>
+					<div class="fl"><img src="carimg/1.jpg" alt="1" class="shopImg"/></div>
+					<p class="fl">经典MINI三门版ONE</p>
+				</div>
+				<p class="fr price">¥185,000</p>
+			</li>
+				</ul>
+		<ul class="last clearfix">
+			<li class="fl"><input type="checkbox" class="checkBox" name="check" onclick="checkAll(this,'check');"/><a onclick="check.click()">全选</a></li>
+
+			<li class="fl">合计: <span class="red">¥185,000</span></li>
+			<li class="fr">
+				<input type="button" value="结算" class="jieSuan"/>
+			</li>
+
+		</ul>
+		<script>
+			function check_all(obj, cName) {
+				var checkboxs = document.getElementsByName(cName);
+				for ( var i = 0; i < checkboxs.length; i+=1) {
+					checkboxs[i].checked = obj.checked;
+				}
+			}
+		</script>
+		<!--底部-->
+		<footer>
+			<p>
+				<a href="img/user_manual.zip">用户指南</a>
+				<span>|</span>
+				<span><a href="manual.html">车型手册</a></span>
+			</p>
+			<p>
+				18025602905
+				<span>|</span>
+				<span>392210276@qq.com</span>
+			</p>
+			<hr />
+			<p><a href="cotanct.html">联络魅力谷</a></p>
+			<hr />
+			<p>粤ICP备16059336号</p>
+			<p>深圳市蓝鳍金枪投资有限公司</p>
+		</footer>
+	</section>
+
+
+
+
+
+</body>
+</html>
